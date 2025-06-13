@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:9.3.0
+    container_name: dongnebangnae-mysql
+    ports:
+      - "23308:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=developer
+      - MYSQL_PASSWORD=developer
+      - MYSQL_DATABASE=dongnebangnae
+    volumes:
+      - ./data/mysql/:/var/lib/mysql
